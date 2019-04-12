@@ -202,7 +202,8 @@ function extract(data: Data): Promise<void> {
 				file: data.filepath,
 				strip: 1,
 				cwd: data.platformFolderPath,
-				Z: true
+				Z: true,
+				preserveOwner: false,
 			})
 		)
 		.then(() => {
